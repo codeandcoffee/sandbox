@@ -5,13 +5,63 @@
     <link rel="stylesheet" href="stylesheets/blueprint/screen.css" type="text/css" media="screen, projection" />  
     <link rel="stylesheet" href="stylesheets/blueprint/print.css" type="text/css" media="print" />  
     <!--[if IE]><link rel="stylesheet" href="stylesheets/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->  
+    <link rel="stylesheet" href="stylesheets/south-street/jquery-ui-1.8.9.custom.css" type="text/css" media="screen, projection" />  
 
     <script src="javascripts/jquery-1.4.4.min.js" type="text/javascript"></script>
-    <script src="javascripts/jquery-ui-1.8.9.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery-ui-1.8.9.custom.min.js" type="text/javascript"></script>
   <head>
   <body>
-    <div class="container">
-
+    <div style="margin: 10px 0 40px 10px;"><p><a id="toggle" href="#">toggle grid</a></p></div>
+    <div id="main" class="container">
+      <div class="span-24"><br/><br/></div>
+      <div class="span-4">&nbsp;</div>
+      <div class="span-16 ui-corner-all">
+        <div class="span-6 last">
+          <h2 class="ui-widget-header ui-corner-all">Code and Coffee</h2>
+        </div>
+        <div id="tabs" class="span-16">
+          <ul>
+            <li><a href="#tabs-1">About</a></li>
+            <li><a href="#tabs-2">Locations</a></li>
+            <li><a href="#tabs-3">News</a></li>
+            <li><a href="#tabs-4">Contact</a></li>
+          </ul>
+          <div id="tabs-1">
+            <p>Code & coffee is an informal get together to write some code Thursday morning. There are no requirements other than the willingness to sit down, pair up, and learn something new. We're going with mornings because the evenings are full enough as it is. Why add to the chaos of user groups, soccer games, and lawn mowing?</p>
+            <p>If you're interested in joining in, just show up. No invited needed, you don't need to RSVP, you just need a laptop. Coffee not provided, but it's just a few steps away. ;)</p>
+            <p>Location will be updated in the posts below, feel free to drop a comment in if you're going to join us. Hope to see you there.</p>
+          </div>
+          <div id="tabs-2">
+            <p>Location, location, location</p>
+            <p>Staufs, Grandview - the greatest location we have</p>
+            <p>Toledo, Ohio - somewhere up there on Wednesdays</p>
+          </div>
+          <div id="tabs-3">
+            <p>We've been at this little shin-dig for over a year now, we've got a few locations going, and plenty of coders looking to sharpen their skills. So...</p>
+            <p>Time to redo the Code and Coffee website! (This one here. The one with the canned CSS layout and the static first post hacked together in 4 hours running on Blogger.)</p>
+          </div>
+          <div id="tabs-4">
+            <p>email blankenburg</p>
+          </div>
+        </div>
+        <div id="widget" class="span-8 ui-widget-content ui-corner-all" style="margin-top: 20px; padding: 4px">
+          <h2 class="ui-corner-all ui-widget-header">Header Words!</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas porttitor mollis. Fusce scelerisque convallis libero vitae placerat. Curabitur ac metus felis. Sed venenatis, urna vel scelerisque facilisis, orci nunc dignissim lacus, a porttitor urna urna id nulla. Sed non mauris sit amet leo mattis volutpat. Ut bibendum sapien vitae purus aliquet volutpat. In hac habitasse platea dictumst. Duis massa lectus, euismod sit amet semper non, suscipit eu ante. Fusce consequat, enim ac accumsan pretium, purus lectus varius sem, vel varius velit mauris quis magna. </p>
+        </div>
+      </div>
+      <div class="span-4 last">&nbsp;</div>
+      <div class="span-24"><br/><br/></div>
     </div>
+
+
+    <script type="text/javascript">
+      $(function(){
+        $("#tabs").tabs();
+      });
+
+      $("#toggle").click(function(){
+        $("#main").toggleClass("showgrid");
+      });
+    </script>
   </body>
 </html>
