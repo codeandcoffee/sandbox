@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Zambia page layout test</title>
+    <link rel="stylesheet" href="stylesheets/blueprint/screen.css" type="text/css" media="screen, projection" />  
+    <link rel="stylesheet" href="stylesheets/blueprint/print.css" type="text/css" media="print" />  
+    <!--[if IE]><link rel="stylesheet" href="stylesheets/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->  
+    <link rel="stylesheet" href="stylesheets/south-street/jquery-ui-1.8.9.custom.css" type="text/css" media="screen, projection" />  
+
+    <script src="javascripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery-ui-1.8.9.custom.min.js" type="text/javascript"></script>
+  <head>
+  <body>
+    <div id="main" class="container">
+      <div class="span-24"><br/><br/></div>
+      <div class="span-4">&nbsp;</div>
+      <div class="span-16 ui-widget-content ui-corner-all">
+        <p>body</p>
+      </div>
+      <div class="span-4 last">&nbsp;</div>
+      <div class="span-24"><br/><br/></div>
+    </div>
+    <div style="margin: 10px 0 40px 10px;">
+      <p>
+        <a id="toggle" href="#">toggle grid</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="index_link" href="index.html">index page</a>
+      </p>
+    </div>
+
+
+    <script type="text/javascript">
+      $(function(){
+      });
+
+      $("#toggle").click(function(){
+        $("#main").toggleClass("showgrid");
+      });
+    </script>
+  </body>
+</html>
+
